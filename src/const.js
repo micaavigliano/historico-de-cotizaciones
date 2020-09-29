@@ -1,0 +1,1 @@
+export const EXCHANGE_SYMBOL = 'https://api.exchangeratesapi.io/latest';
