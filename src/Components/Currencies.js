@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './filters.css';
 import 'currency-flags/dist/currency-flags.min.css';
 
 function Currencies({exchangeRates}) {
-    console.log(exchangeRates)
-    const currencies = Object.keys(exchangeRates)
-    console.log(currencies)
+    //console.log(exchangeRates);
+    const currencies = Object.keys(exchangeRates);
+    //console.log(currencies)
+    const [viewMore, setViewMore] = useState(false);
 
     return (
         <div>
@@ -18,6 +19,9 @@ function Currencies({exchangeRates}) {
                         <span className="valueCurrency">{exchangeRates[value].toFixed(3)}</span>
                     </li>)
             }
+            <div>
+                <button>View More</button>
+            </div>
         </div>
     )
 }

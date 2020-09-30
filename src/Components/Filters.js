@@ -7,7 +7,7 @@ import moment from 'moment';
 import './filters.css'
 
 const Filters = () => {
-    const [currencies, setCurrencies] = useState([]);
+    const [currencies, setCurrencies] = useState(['EUR']);
     const [selectedDate, setSelectedDate] = useState();
     const [selectedCurrency, setSelectedCurrency] = useState([]);
     const [exchangeRates, setExchangeRates] = useState();
@@ -60,7 +60,7 @@ const Filters = () => {
                 </div>
                 <div className="symbol-select">
                     <select id="symbols" name="nombre" onChange={handleChangeCurrency}>
-                        <option value="default" disabled>Moneda</option>
+                        <option value="default-value" disabled>Moneda</option>
                         {currencies.map((option) => (
                             <option value={option} key={option}>{option}</option>
                         ))}
